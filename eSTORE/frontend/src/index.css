@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,200;8..30,300;8..30,400;8..30,500;8..30,700;8..30,800&family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@200;400;500;600;700&display=swap");
+
+/* Required font family  */
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Playfair Display', serif; */
+/* font-family: 'Bungee Spice', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* navber styling  */
+.navbar {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  line-height: 26px;
+  font-size: 17px;
+  font-weight: 500;
+  box-shadow: 0 8px 6px -6px grey;
+  --webkit-box-shadow: 0 8px 6px -6px grey;
+  padding: 20px 10px;
+}
+
+.navbar-brand {
+  font-family: "Bungee Spice", sans-serif;
+  font-size: 30px;
+}
+
+.nav-link {
+  color: white !important;
+  margin: 0 10px;
+}
+
+.nav-link:hover {
+  color: red !important;
+}
+
+button {
+  background-color: red;
+  margin: 0 5px;
+  border: none;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 990px) {
+  button {
+    margin: 10px 0;
+  }
+}
+
+button:hover {
+  background-color: white;
+}
+
+
+/* *********************FOOTER*********************** */
+.footer{
+  color: white;
+  background-color: black;
+  padding: 5px;
+  height: auto;
+  
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.footer a:hover{
+  color: red;
+  border-bottom: 1px solid red;
+}

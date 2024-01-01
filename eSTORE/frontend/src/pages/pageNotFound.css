@@ -1,0 +1,29 @@
+
+  
+  img {
+    width: 50% ;
+    height: 70vh !important;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .imageclass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .imageclass a{
+    text-decoration: none;
+    color:black;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .imageclass a:hover{
+    background-color: black;
+    color: white;
+  }
+  

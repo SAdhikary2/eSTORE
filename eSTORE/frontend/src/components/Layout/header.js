@@ -42,21 +42,21 @@ function header() {
 
               <li className="nav-item">
                 <button>
-                  <NavLink to="/" className="nav-link ">
+                  <NavLink to="/register" className="nav-link ">
                     Register
                   </NavLink>
                 </button>
               </li>
               <li className="nav-item">
                 <button>
-                  <NavLink to="/" className="nav-link ">
+                  <NavLink to="/login" className="nav-link ">
                     Login
                   </NavLink>
                 </button>
               </li>
               <li className="nav-item">
                 <button>
-                  <NavLink to="/" className="nav-link ">
+                  <NavLink to="/cart" className="nav-link ">
                     Cart(0)
                   </NavLink>
                 </button>

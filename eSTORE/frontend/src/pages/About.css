@@ -15,7 +15,13 @@ p {
     line-height: 1.6;
 }
 
-.imageClass{
-    max-width: 100%;
-    max-height: 30%;
+.card-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin: 5px;
 }

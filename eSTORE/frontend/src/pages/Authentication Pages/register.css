@@ -3,11 +3,67 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("../../images/ecommerce.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    
    
 }
 
 .formsec{
-    background-color: rgb(124, 121, 121);
+    background-color: rgb(255, 237, 188);
+   
     padding: 40px;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px 5px rgb(105, 104, 104);
+    margin-bottom: 150px;
+ 
+}
+
+
+.formsec a{
+    color: red;
+}
+
+.formsec h2{
+    margin-bottom: 20px;
+  
+}
+.formsec p{
+    margin-top: 10px;
+}
+
+
+
+input{
+    width: 25vw !important;
+}
+
+@media screen and (max-width:826px) {
+    input{
+        width: 45vw !important;
+    }
+}
+
+@media screen and (max-width:536px) {
+    input{
+        width: 65vw !important;
+    }
+}
+
+
+.loginform{
+
+}
+
+.registerBtn{
+    background-color: red !important;
+    width: 100%;
+
+}
+
+.registerBtn:hover{
+    background-color: rgb(158, 2, 2) !important;
 }

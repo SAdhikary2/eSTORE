@@ -26,8 +26,8 @@ const contact = () => {
           <input type="text" name="name" id="name" required />
         </p>
         <p>
-          <label>Company</label>
-          <input type="text" name="company" id="company" />
+          <label>Address</label>
+          <input type="text" name="address" id="address" />
         </p>
         <p>
           <label>E-mail Address</label>

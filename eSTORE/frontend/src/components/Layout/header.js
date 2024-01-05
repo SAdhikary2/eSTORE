@@ -1,8 +1,26 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { HiShoppingBag } from "react-icons/hi2";
+import {useAuth} from '../../context/auth'
+import  toast from 'react-hot-toast';
 
-function header() {
+function Header() {
+
+  //using hook
+  const [auth,setAuth]=useAuth();
+  //creating logout handler
+  const handleLogout =()=>{
+    setAuth({
+      ...auth,
+      user:null,
+      token:"",
+    });
+
+    localStorage.removeItem("auth");
+    toast.success("Logout Successfully !!!");
+
+  }
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light  bg-dark ">
@@ -40,7 +58,10 @@ function header() {
                 </NavLink>
               </li>
 
-              <li className="nav-item">
+              {
+                !auth.user ? (
+                  <>
+                  <li className="nav-item">
                 <button>
                   <NavLink to="/register" className="nav-link ">
                     Register
@@ -54,6 +75,19 @@ function header() {
                   </NavLink>
                 </button>
               </li>
+                  </>
+                ):(
+                  <>
+                  <button>
+                  <NavLink onClick={handleLogout} to="/login" className="nav-link ">
+                    Logout
+                  </NavLink>
+                </button>
+                  </>
+                )
+              }
+
+
               <li className="nav-item">
                 <button>
                   <NavLink to="/cart" className="nav-link ">
@@ -69,4 +103,4 @@ function header() {
   );
 }
 
-export default header;
+export default Header;

@@ -7,7 +7,7 @@
 
 
 .upper{
-  background: #a9a9aa;
+ 
   color: #485e74;
   line-height: 1.6;
   font-family: "Yantramanav", sans-serif;
@@ -95,7 +95,7 @@ ul {
 }
 
 .contact form button {
-  background: #627edc;
+  background: red;
   border: 0;
   color: #e4e4e4;
   text-transform: uppercase;
@@ -105,7 +105,7 @@ ul {
 
 .contact form button:hover,
 .contact form button:focus {
-  background: #3952a3;
+  background: rgb(95, 7, 7);
   color: #ffffff;
   outline: 0;
   transition: background-color 2s ease-out;

@@ -10,6 +10,12 @@ function footer() {
      </p>
     </div>
   );
+
+
+
+
+
+
 }
 
 export default footer

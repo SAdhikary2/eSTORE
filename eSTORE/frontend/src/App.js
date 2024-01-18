@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Login from "./pages/Authentication Pages/Login";
 import { Toaster } from "react-hot-toast";
 import Dashboard from './pages/user/Dashboard';
+import PrivateRoute from "./components/Routes/PrivateRoute";
 
 function App() {
   return (
@@ -16,8 +17,15 @@ function App() {
       <Toaster />
       <Routes>
         <Route path="/" element={<Home />} />
+
+    <Route path="/dashboard" element={<PrivateRoute/>}>
+    <Route path="" element={<Dashboard />} />
+    </Route>
+
+     
+
         <Route path="/about" element={<About />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+       
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />

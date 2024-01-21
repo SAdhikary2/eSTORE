@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { useState,useEffect } from 'react';
 import {useAuth} from '../../context/auth';
 import {Outlet} from 'react-router-dom';
@@ -24,7 +24,7 @@ useEffect(()=>{
 
 
 
-  return ok ? <Outlet/> :<Spinner/>
+  return ok ? <Outlet/> :<Spinner/>;
 }
 
 export default PrivateRoute

@@ -22,6 +22,7 @@
   box-shadow: 0 8px 6px -6px grey;
   --webkit-box-shadow: 0 8px 6px -6px grey;
   padding: 20px 10px;
+  text-transform: uppercase;
 }
 
 .navbar-brand {
@@ -75,3 +76,5 @@ button:hover {
   color: red;
   border-bottom: 1px solid red;
 }
+
+

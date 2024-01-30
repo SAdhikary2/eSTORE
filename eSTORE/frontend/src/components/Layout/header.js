@@ -1,32 +1,30 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { HiShoppingBag } from "react-icons/hi2";
-import {useAuth} from '../../context/auth'
-import  toast from 'react-hot-toast';
+import { useAuth } from "../../context/auth";
+import toast from "react-hot-toast";
 
 function Header() {
-
   //using hook
-  const [auth,setAuth]=useAuth();
+  const [auth, setAuth] = useAuth();
   //creating logout handler
-  const handleLogout =()=>{
+  const handleLogout = () => {
     setAuth({
       ...auth,
-      user:null,
-      token:"",
+      user: null,
+      token: "",
     });
 
     localStorage.removeItem("auth");
     toast.success("Logout Successfully !!!");
-
-  }
+  };
 
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light  bg-dark ">
         <div className="container-fluid ">
           <NavLink to="/" className="navbar-brand text-light">
-          <HiShoppingBag />
+            <HiShoppingBag />
             eSTORE
           </NavLink>
           <button
@@ -43,7 +41,11 @@ function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className=" navbar-nav ms-auto mb-2 mb-lg-0">
               <li className=" nav-item">
-                <NavLink to="/category" className="nav-link active " aria-current="page">
+                <NavLink
+                  to="/category"
+                  className="nav-link active "
+                  aria-current="page"
+                >
                   Category
                 </NavLink>
               </li>
@@ -58,35 +60,61 @@ function Header() {
                 </NavLink>
               </li>
 
-              {
-                !auth.user ? (
-                  <>
+              {!auth.user ? (
+                <>
                   <li className="nav-item">
-                <button>
-                  <NavLink to="/register" className="nav-link ">
-                    Register
-                  </NavLink>
-                </button>
-              </li>
-              <li className="nav-item">
-                <button>
-                  <NavLink to="/login" className="nav-link ">
-                    Login
-                  </NavLink>
-                </button>
-              </li>
-                  </>
-                ):(
-                  <>
-                  <button>
-                  <NavLink onClick={handleLogout} to="/login" className="nav-link ">
-                    Logout
-                  </NavLink>
-                </button>
-                  </>
-                )
-              }
+                    <button>
+                      <NavLink to="/register" className="nav-link ">
+                        Register
+                      </NavLink>
+                    </button>
+                  </li>
+                  <li className="nav-item">
+                    <button>
+                      <NavLink to="/login" className="nav-link ">
+                        Login
+                      </NavLink>
+                    </button>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle "
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      {auth?.user?.name}
+                    </a>
+                    <ul
+                      className="dropdown-menu"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <li>
+                        <a className="dropdown-item" href="/dashboard">
+                          Dashboard
+                        </a>
+                      </li>
+                    
+                     
+                    </ul>
+                  </li>
 
+                  <button>
+                    <NavLink
+                      onClick={handleLogout}
+                      to="/login"
+                      className="nav-link "
+                    >
+                      Logout
+                    </NavLink>
+                  </button>
+                </>
+              )}
 
               <li className="nav-item">
                 <button>

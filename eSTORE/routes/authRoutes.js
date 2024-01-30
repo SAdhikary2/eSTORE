@@ -1,5 +1,5 @@
 const express = require('express');
-const {registerController,loginController} = require('../controllers/authControllers');
+const {registerController,loginController, forgotPasswordController} = require('../controllers/authControllers');
 const {requireSignIn} = require('../middlewares/authMiddleware');
 
 
@@ -10,7 +10,12 @@ const router = express.Router()
 
 //for registration
 router.post('/register',registerController);
+//for login
 router.post("/login",loginController);
+
+//for forgot password
+router.post('/forgot-password',forgotPasswordController);
+
 
 //protected routes for acceessing the dashboard
 router.get("/user-auth",requireSignIn,(req,res)=>{

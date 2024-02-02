@@ -95,7 +95,9 @@ function Header() {
                       aria-labelledby="navbarDropdown"
                     >
                       <li>
-                        <a className="dropdown-item" href="/dashboard">
+                        <a className="dropdown-item" href={`/dashboard/${
+                          auth?.user?.role=== 1 ?'admin':'user'
+                        }`}>
                           Dashboard
                         </a>
                       </li>

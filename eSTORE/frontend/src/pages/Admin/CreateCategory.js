@@ -1,20 +1,22 @@
-import React from 'react'
-import Layout from '../../components/Layout/Layout'
-import AdminMenu from '../../components/Layout/AdminMenu'
+import React from "react";
+import Layout from "../../components/Layout/Layout";
+import AdminMenu from "../../components/Layout/AdminMenu";
 
 const CreateCategory = () => {
   return (
-    <Layout>
-      <div className='row'>
-        <div className='col-md-2'>
-            <AdminMenu/>
-        </div>
-        <div className='col-md-9'>
-            All Users
+    <Layout title={"Create Category"}>
+      <div className="container-fluid m-3">
+        <div className="row">
+          <div className="col-md-2">
+            <AdminMenu />
+          </div>
+          <div className="col-md-9">
+            <h1>Create Category</h1>
+          </div>
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default CreateCategory
+export default CreateCategory;

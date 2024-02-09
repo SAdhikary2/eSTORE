@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "frontend":"npm start --prefix ./frontend",
+    "frontend": "npm start --prefix ./frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\""
   },
   "keywords": [],
@@ -22,6 +22,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.3",
     "morgan": "^1.10.0",
-    "react-icons": "^4.12.0"
+    "react-icons": "^4.12.0",
+    "slugify": "^1.6.6"
   }
 }

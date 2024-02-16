@@ -6,7 +6,7 @@ const router = express.Router();
 
 
 //routes
-router.post('create-category',requireSignIn,isAdmin,createCategoryController);
+router.post('/create-category',requireSignIn,isAdmin,createCategoryController);
 
 
 

@@ -5,7 +5,8 @@ const app = express();
 const morgan = require('morgan');
 const connectDB  = require("./config/db");
 const authRoutes=require('./routes/authRoutes')
-const categoryRoute= require('./routes/categoryRoute'); 
+const CategoryRoutes= require('./routes/categoryRoute')
+
 const cors=require('cors');
 
 //configure env 
@@ -22,7 +23,7 @@ app.use(morgan('dev'));
 
 //routes
 app.use('/api/v1/auth',authRoutes);
-app.use("/api/v1/category",categoryRoute)
+app.use("/api/v1/category",CategoryRoutes)
 
 app.get("/",(req,res)=>{
     res.send("<h1>Welcome to my ecommerce website  </h1>")
